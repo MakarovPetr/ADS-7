@@ -39,15 +39,14 @@ void TPQueue<T>::push(const T& item) {
             cur2->next = head;
             cur2->value = item;
             head = cur2;
-        }
-        else {
+        } else {
             cur1 = head;
             for (int i = 1; i < count; i++) {
                 cur1 = cur1->next;
             }
             cur2->next = cur1->next;
             cur2->value = item;
-            cur2->next = cur1;
+            cur1->next = cur2;
         }
     }
 }
