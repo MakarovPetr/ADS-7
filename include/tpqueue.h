@@ -5,15 +5,15 @@
 template<typename T>
 class TPQueue {
      private:
-    struct Node {
-        T value;
-        Node* next;
-    };
-    Node* head;
+     struct Node {
+          T value;
+          Node* next;
+     };
+     Node* head;
      public:
-    TPQueue() : head(nullptr) {}
-    void push(const T& item);
-    T pop();
+     TPQueue() : head(nullptr) {}
+     void push(const T& item);
+     T pop();
 };
 
 template<typename T>
